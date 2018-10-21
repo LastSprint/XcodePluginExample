@@ -10,7 +10,6 @@
 		B136D5A92178D5530025E4F7 /* ParameterParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136D5A82178D5530025E4F7 /* ParameterParserTest.swift */; };
 		B1658626217CC3F00077B993 /* PropertyParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1658625217CC3F00077B993 /* PropertyParserTest.swift */; };
 		B1658628217CDEA00077B993 /* MethodParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1658627217CDEA00077B993 /* MethodParser.swift */; };
-		B165862B217CEB900077B993 /* ParseMethodReturnTypeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165862A217CEB900077B993 /* ParseMethodReturnTypeTest.swift */; };
 		B165862C217CED1E0077B993 /* MethodParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1658627217CDEA00077B993 /* MethodParser.swift */; };
 		B165862E217CEE500077B993 /* ParseMethodParametersTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B165862D217CEE500077B993 /* ParseMethodParametersTest.swift */; };
 		B1E7654C216FADA200A5C591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E7654B216FADA200A5C591 /* AppDelegate.swift */; };
@@ -65,7 +64,6 @@
 		B136D5A82178D5530025E4F7 /* ParameterParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterParserTest.swift; sourceTree = "<group>"; };
 		B1658625217CC3F00077B993 /* PropertyParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyParserTest.swift; sourceTree = "<group>"; };
 		B1658627217CDEA00077B993 /* MethodParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodParser.swift; sourceTree = "<group>"; };
-		B165862A217CEB900077B993 /* ParseMethodReturnTypeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseMethodReturnTypeTest.swift; sourceTree = "<group>"; };
 		B165862D217CEE500077B993 /* ParseMethodParametersTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseMethodParametersTest.swift; sourceTree = "<group>"; };
 		B1E76548216FADA200A5C591 /* ExamplePlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamplePlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E7654B216FADA200A5C591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		B1658629217CEB390077B993 /* Method tests */ = {
 			isa = PBXGroup;
 			children = (
-				B165862A217CEB900077B993 /* ParseMethodReturnTypeTest.swift */,
 				B165862D217CEE500077B993 /* ParseMethodParametersTest.swift */,
 			);
 			path = "Method tests";
@@ -366,7 +363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B165862B217CEB900077B993 /* ParseMethodReturnTypeTest.swift in Sources */,
 				B165862E217CEE500077B993 /* ParseMethodParametersTest.swift in Sources */,
 				B136D5A92178D5530025E4F7 /* ParameterParserTest.swift in Sources */,
 				B1EBFAC321752EE4007FC50F /* VariableParserTest.swift in Sources */,
