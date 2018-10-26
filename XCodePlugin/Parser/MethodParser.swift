@@ -189,7 +189,7 @@ public class MethodParser {
             for char in line {
                 if char == "{" {
                     openBraketsCount += 1
-                } else {
+                } else if char == "}" {
                     openBraketsCount -= 1
                 }
             }

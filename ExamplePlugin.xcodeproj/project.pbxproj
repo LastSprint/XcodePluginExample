@@ -22,6 +22,7 @@
 		B1E76567216FADC200A5C591 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E76566216FADC200A5C591 /* SourceEditorCommand.swift */; };
 		B1E7656C216FADC200A5C591 /* XCodePlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B1E7655F216FADC200A5C591 /* XCodePlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B1EAE2CE2183866100994EE8 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFABA2174EFD7007FC50F /* Function.swift */; };
+		B1EAE2D021838AD500994EE8 /* ParserMethodsSkipBodyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EAE2CF21838AD500994EE8 /* ParserMethodsSkipBodyTest.swift */; };
 		B1EBFAB42174EEA1007FC50F /* SwiftInterfaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */; };
 		B1EBFAB72174EEBD007FC50F /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB62174EEBC007FC50F /* Class.swift */; };
 		B1EBFAB92174EEE6007FC50F /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB82174EEE6007FC50F /* Variable.swift */; };
@@ -81,6 +82,7 @@
 		B1E76566216FADC200A5C591 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		B1E76568216FADC200A5C591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1E76569216FADC200A5C591 /* XCodePlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XCodePlugin.entitlements; sourceTree = "<group>"; };
+		B1EAE2CF21838AD500994EE8 /* ParserMethodsSkipBodyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserMethodsSkipBodyTest.swift; sourceTree = "<group>"; };
 		B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInterfaceParser.swift; sourceTree = "<group>"; };
 		B1EBFAB62174EEBC007FC50F /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		B1EBFAB82174EEE6007FC50F /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				B165862A217CEB900077B993 /* ParseMethodReturnTypeTest.swift */,
 				B165862D217CEE500077B993 /* ParseMethodParametersTest.swift */,
+				B1EAE2CF21838AD500994EE8 /* ParserMethodsSkipBodyTest.swift */,
 			);
 			path = "Method tests";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EAE2D021838AD500994EE8 /* ParserMethodsSkipBodyTest.swift in Sources */,
 				B165862B217CEB900077B993 /* ParseMethodReturnTypeTest.swift in Sources */,
 				B165862E217CEE500077B993 /* ParseMethodParametersTest.swift in Sources */,
 				B136D5A92178D5530025E4F7 /* ParameterParserTest.swift in Sources */,
