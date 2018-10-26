@@ -24,7 +24,7 @@
 		B1EBFAB42174EEA1007FC50F /* SwiftInterfaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */; };
 		B1EBFAB72174EEBD007FC50F /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB62174EEBC007FC50F /* Class.swift */; };
 		B1EBFAB92174EEE6007FC50F /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB82174EEE6007FC50F /* Variable.swift */; };
-		B1EBFABB2174EFD7007FC50F /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFABA2174EFD7007FC50F /* Method.swift */; };
+		B1EBFABB2174EFD7007FC50F /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFABA2174EFD7007FC50F /* Function.swift */; };
 		B1EBFAC321752EE4007FC50F /* VariableParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAC221752EE4007FC50F /* VariableParserTest.swift */; };
 		B1EBFACA21753216007FC50F /* SwiftInterfaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */; };
 		B1EBFACB21753232007FC50F /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB82174EEE6007FC50F /* Variable.swift */; };
@@ -83,7 +83,7 @@
 		B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftInterfaceParser.swift; sourceTree = "<group>"; };
 		B1EBFAB62174EEBC007FC50F /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		B1EBFAB82174EEE6007FC50F /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
-		B1EBFABA2174EFD7007FC50F /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		B1EBFABA2174EFD7007FC50F /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 		B1EBFAC021752EE4007FC50F /* ExamplePluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamplePluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EBFAC221752EE4007FC50F /* VariableParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableParserTest.swift; sourceTree = "<group>"; };
 		B1EBFAC421752EE4007FC50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			children = (
 				B1EBFAB62174EEBC007FC50F /* Class.swift */,
 				B1EBFAB82174EEE6007FC50F /* Variable.swift */,
-				B1EBFABA2174EFD7007FC50F /* Method.swift */,
+				B1EBFABA2174EFD7007FC50F /* Function.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 			files = (
 				B1EBFAB92174EEE6007FC50F /* Variable.swift in Sources */,
 				B1EBFAB72174EEBD007FC50F /* Class.swift in Sources */,
-				B1EBFABB2174EFD7007FC50F /* Method.swift in Sources */,
+				B1EBFABB2174EFD7007FC50F /* Function.swift in Sources */,
 				B1E76565216FADC200A5C591 /* SourceEditorExtension.swift in Sources */,
 				B1658628217CDEA00077B993 /* MethodParser.swift in Sources */,
 				B1EBFAB42174EEA1007FC50F /* SwiftInterfaceParser.swift in Sources */,

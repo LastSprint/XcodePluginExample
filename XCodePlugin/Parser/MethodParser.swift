@@ -23,6 +23,9 @@ public class MethodParser {
     public enum ParseError: Error, LocalizedError {
         case cantParseMethod
         case cantParseMethodReturnTypeExpression
+        case cantParseAccessType
+        case cantParseMetaMethodInformation
+        case cantParseName
     }
 
     public static func parse(sources: [String]) throws {
@@ -39,6 +42,90 @@ public class MethodParser {
                 let stringRange = Range<String.Index>(firstMathed.range, in: line) else {
                     throw ParseError.cantParseMethod
             }
+
+            let decalration = trimmedLine.substring(with: stringRange)
+
+            var needsToMatch = false
+            var saveSymbols = false
+            var searchStart = true
+            var searchEnd = false
+
+            var openBraketsCount = 0
+
+            var resultString = ""
+
+            for character in decalration {
+                if searchStart {
+                    if character == "<" {
+                        needsToMatch = true
+                    } else if character == ">" {
+                        needsToMatch = false
+                    } else if character == "(" && !needsToMatch {
+                        saveSymbols = true
+                        searchEnd = true
+                        searchStart = false
+                    }
+                } else if searchEnd {
+                    if character == "(" {
+                        openBraketsCount += 1
+                    } else if character == ")" {
+                        if openBraketsCount == 0 {
+                            break
+                        } else {
+                            openBraketsCount-=1
+                        }
+                    }
+                    resultString.append(character)
+                }
+            }
+
+
+            let parameters = try parseParameters(string: resultString)
+            let returnType = try parseReturnType(string: decalration)
+
+            let splitedByWhitespace = decalration.split(separator: " ")
+
+            // private static func blablabla() -> dfsdf
+
+            var accessType: AccessType
+            var isStatic = false
+
+            if splitedByWhitespace[0] == "static" {
+                isStatic = true
+                if splitedByWhitespace[1] == "func" {
+                    accessType = .private
+                } else if let guardedAccessType = AccessType(rawValue: String(splitedByWhitespace[1])) {
+                    accessType = guardedAccessType
+                } else {
+                    throw ParseError.cantParseAccessType
+                }
+            } else if let guardedAccessType = AccessType(rawValue: String(splitedByWhitespace[0])) {
+                accessType = guardedAccessType
+
+                if splitedByWhitespace[1] == "static" {
+                    isStatic = true
+                }
+            } else {
+                throw ParseError.cantParseMetaMethodInformation
+            }
+
+            let splitedByOpenBraket = decalration.split(separator: "(")
+
+            guard let itemBeforeBrakets = decalration.split(separator: "(").first else {
+                throw ParseError.cantParseName
+            }
+
+            var nameDeclaration = String(itemBeforeBrakets).trimmed.reversed()
+            var name = ""
+            for character in nameDeclaration {
+                if character == " " {
+                    break
+                } else {
+                    name.append(character)
+                }
+            }
+
+            return Function(parameters: parameters, returnType: returnType, name: name, accessType: accessType, isStatic: isStatic)
         }
     }
 

@@ -11,7 +11,7 @@ import Foundation
 /// Represents a swift class in meta form
 public class Class {
     var properties: [Property]
-    var methods: [Method]
+    var methods: [Function]
 
     let name: String
     let isStruct: Bool
@@ -20,6 +20,6 @@ public class Class {
         self.name = name
         self.isStruct = isStruct
         self.properties = [Property]()
-        self.methods = [Method]()
+        self.methods = [Function]()
     }
 }

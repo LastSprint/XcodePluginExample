@@ -8,9 +8,10 @@
 
 import Foundation
 
-public struct Method {
-    let parameters: [Variable]
+public struct Function {
+    let parameters: [Parameters]
     let returnType: String
     let name: String
     let accessType: AccessType
+    let isStatic: Bool
 }
