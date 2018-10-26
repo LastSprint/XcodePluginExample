@@ -9,7 +9,7 @@
 import Foundation
 
 public struct Function {
-    let parameters: [Parameters]
+    let parameters: [Parameter]
     let returnType: String
     let name: String
     let accessType: AccessType

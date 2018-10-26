@@ -21,6 +21,7 @@
 		B1E76565216FADC200A5C591 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E76564216FADC200A5C591 /* SourceEditorExtension.swift */; };
 		B1E76567216FADC200A5C591 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E76566216FADC200A5C591 /* SourceEditorCommand.swift */; };
 		B1E7656C216FADC200A5C591 /* XCodePlugin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B1E7655F216FADC200A5C591 /* XCodePlugin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B1EAE2CE2183866100994EE8 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFABA2174EFD7007FC50F /* Function.swift */; };
 		B1EBFAB42174EEA1007FC50F /* SwiftInterfaceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB32174EEA1007FC50F /* SwiftInterfaceParser.swift */; };
 		B1EBFAB72174EEBD007FC50F /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB62174EEBC007FC50F /* Class.swift */; };
 		B1EBFAB92174EEE6007FC50F /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EBFAB82174EEE6007FC50F /* Variable.swift */; };
@@ -343,6 +344,7 @@
 				B1E7654E216FADA200A5C591 /* ViewController.swift in Sources */,
 				B165862C217CED1E0077B993 /* MethodParser.swift in Sources */,
 				B1EBFACA21753216007FC50F /* SwiftInterfaceParser.swift in Sources */,
+				B1EAE2CE2183866100994EE8 /* Function.swift in Sources */,
 				B1E7654C216FADA200A5C591 /* AppDelegate.swift in Sources */,
 				B1EBFACB21753232007FC50F /* Variable.swift in Sources */,
 			);

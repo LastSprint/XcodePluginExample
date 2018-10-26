@@ -26,10 +26,14 @@ public class MethodParser {
         case cantParseAccessType
         case cantParseMetaMethodInformation
         case cantParseName
+        case cantParseBody
     }
 
-    public static func parse(sources: [String]) throws {
-        for line in sources {
+    public static func parse(sources: [String]) throws -> ParseResult<Function> {
+
+        var index = 0
+
+        for (index, line) in sources.enumerated() {
             let trimmedLine = line.trimmed
 
             let regExpPattern = "\(AccessType.stringCases)?func\\(.*\\) ?(-> ?([A-Z,a-z]+)?)? *{"
@@ -125,8 +129,12 @@ public class MethodParser {
                 }
             }
 
-            return Function(parameters: parameters, returnType: returnType, name: name, accessType: accessType, isStatic: isStatic)
+            let endLineIndex = try skipBody(from: sources[index...].map { $0 })
+            let functionModel = Function(parameters: parameters, returnType: returnType, name: name, accessType: accessType, isStatic: isStatic)
+            return ParseResult(result: functionModel, newIndex: endLineIndex)
         }
+
+        throw ParseError.cantParseMethod
     }
 
     /// Expected method arguments like this: `var: Type, var: Type`
@@ -173,5 +181,25 @@ public class MethodParser {
             .replacingOccurrences(of: "}", with: "")
 
         return String(replaced).trimmed
+    }
+
+    static func skipBody(from sources: [String]) throws -> Int {
+        var openBraketsCount = 0
+        for (index, line) in sources.enumerated() {
+            for char in line {
+                if char == "{" {
+                    openBraketsCount += 1
+                } else {
+                    openBraketsCount -= 1
+                }
+            }
+
+            if openBraketsCount == 0 {
+                return index
+            }
+        }
+
+        throw ParseError.cantParseBody
+
     }
 }
